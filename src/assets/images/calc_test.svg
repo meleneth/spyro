@@ -13,8 +13,8 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="New document 1">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="calc_test.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="380.71429"
+     inkscape:cx="720.51629"
      inkscape:cy="514.28571"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -51,45 +51,41 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       sodipodi:type="arc"
-       style="fill:#050000;fill-opacity:1;stroke:#00fd00;stroke-width:40;stroke-miterlimit:4;stroke-opacity:0.94690265;stroke-dasharray:none"
+    <ellipse
+       style="fill:#050000;fill-opacity:1;stroke:#00fd00;stroke-width:40;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94690265"
        id="path2985"
-       sodipodi:cx="307.14285"
-       sodipodi:cy="225.21933"
-       sodipodi:rx="187.14285"
-       sodipodi:ry="161.42857"
-       d="m 494.28571,225.21933 a 187.14285,161.42857 0 1 1 -374.28571,0 187.14285,161.42857 0 1 1 374.28571,0 z" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#050000;fill-opacity:1;stroke:#00fd00;stroke-width:40;stroke-miterlimit:4;stroke-opacity:0.94690265;stroke-dasharray:none"
+       cx="132.85713"
+       cy="213.79076"
+       rx="187.14285"
+       ry="161.42857" />
+    <ellipse
+       style="fill:#050000;fill-opacity:1;stroke:#00fd00;stroke-width:40;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94690265"
        id="path2987"
-       sodipodi:cx="368.57144"
-       sodipodi:cy="736.64789"
-       sodipodi:rx="220"
-       sodipodi:ry="187.14285"
-       d="m 588.57144,736.64789 a 220,187.14285 0 1 1 -440,0 220,187.14285 0 1 1 440,0 z" />
+       cx="582.85718"
+       cy="213.79074"
+       rx="220"
+       ry="187.14285" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:none;font-family:Sans"
-       x="248.57143"
-       y="212.36218"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:none"
+       x="74.285713"
+       y="200.93361"
        id="button_1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan2991"
-         x="248.57143"
-         y="212.36218">Push Me</tspan></text>
+         x="74.285713"
+         y="200.93361">Push Me</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#00ff82;fill-opacity:1;stroke:none;font-family:Sans"
-       x="288.57144"
-       y="715.21936"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#00ff82;fill-opacity:1;stroke:none"
+       x="502.85718"
+       y="192.36221"
        id="text3761"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="change_me_text"
-         x="288.57144"
-         y="715.21936">Change Me</tspan></text>
+         x="502.85718"
+         y="192.36221">Change Me</tspan></text>
   </g>
 </svg>
