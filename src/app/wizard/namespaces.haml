@@ -1,0 +1,7 @@
+%h2
+  namespaces
+%ul
+  %li{ng: {repeat: "namespace in wizard.namespaces"}}
+    ="{{namespace.name}}"
+%button{ng: {click: "add_namespace"}}
+  = "+"
