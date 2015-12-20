@@ -1,7 +1,7 @@
 %h2
-  namespaces
+  namespaces :)
+%span{"ng-click": "wizard.add_namespace()"}
+  = "push the button"
 %ul
   %li{"ng-repeat": "namespace in wizard.namespaces"}
     ="{{namespace.name}}"
-%button{"ng-click": "wizard.add_namespace"}
-  = "+"
