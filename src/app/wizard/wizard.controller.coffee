@@ -1,7 +1,7 @@
 angular.module "spyro"
-  .controller "WizardController", ->
+  .controller "WizardController", (ProjectService) ->
     vm = this
-    vm.namespaces = []
+    vm.namespaces = ProjectService.namespaces
     vm.wizard_name = "Gandalf"
 
     vm.add_namespace = ->
