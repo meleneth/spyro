@@ -5,3 +5,7 @@
 %ul
   %li{"ng-repeat": "namespace in wizard.namespaces"}
     ="{{namespace.name}}"
+    %span{"ng-repeat-start": "type in wizard.types[namespace.name]"}
+      ="{{type.name}}"
+    %span{"ng-repeat-end": true}
+      ="{{$last ? '': ', '}}"
