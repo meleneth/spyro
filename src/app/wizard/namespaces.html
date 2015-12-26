@@ -1,9 +1,17 @@
 <h2>
   namespaces
-</h2>
-<span ng-click='wizard.add_namespace()'>
-  push the button
+(
+<span ng-click='wizard.make_new_namespace()'>
+  +
 </span>
+)
+</h2>
+<div ng-if="wizard.new_namespace">
+  <input ng-model="wizard.new_namespace.name"></input>
+  <span ng-click="wizard.save_new_namespace()">
+    save
+  </span>
+</div>
 <ul>
   <li ng-repeat='namespace in wizard.namespaces'>
     <a ui-sref='namespace({namespace: namespace.name})'>

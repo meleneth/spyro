@@ -1,0 +1,16 @@
+convert to this data layout:
+
+namespaces = []
+
+namespace = {name: 'std', types: [], classes: []}
+
+type: {name: 'uint16_t', size: 2, alias: ''}
+
+class = {name: '', members: [], methods: []}
+
+member = {name: '', type: 'std::uint16_t'}
+
+method = {return_type: 'std::uint16_t', name: '', arguments: []}
+
+argument = {name: '', type: 'std::uint16_t'}
+
