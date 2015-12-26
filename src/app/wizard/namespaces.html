@@ -1,0 +1,19 @@
+<h2>
+  namespaces
+</h2>
+<span ng-click='wizard.add_namespace()'>
+  push the button
+</span>
+<ul>
+  <li ng-repeat='namespace in wizard.namespaces'>
+    <a ui-sref='namespace({namespace: namespace.name})'>
+      {{namespace.name}}
+    </a>
+    <span ng-repeat-start='type in wizard.types[namespace.name]'>
+      {{type.name}}
+    </span>
+    <span ng-repeat-end>
+      {{$last ? '': ', '}}
+    </span>
+  </li>
+</ul>

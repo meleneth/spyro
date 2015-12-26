@@ -1,2 +1,19 @@
 %h1
-  SINGULAR NAMESPACE PAGE
+  Namespace
+  &gt;
+  ="{{ wizard.namespace.name }}"
+  &lt;
+%h4 Types
+%ul
+  %li{"ng-repeat": "type in wizard.types"}
+    [
+    = "{{ type.size }}"
+    ]
+    = "{{ type.name }}"
+%h4 Classes
+%ul
+  %li{"ng-repeat": "class in wizard.classes"}
+    [
+    = "{{ class.size }}"
+    ]
+    = "{{ class.name }}"
