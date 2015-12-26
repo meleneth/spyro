@@ -1,11 +1,12 @@
 %h2
-  namespaces :)
+  namespaces
 %span{"ng-click": "wizard.add_namespace()"}
   = "push the button"
 %ul
   %li{"ng-repeat": "namespace in wizard.namespaces"}
-    ="{{namespace.name}}"
+    %a{"ui-sref": "namespaces.detail({namespace: namespace.name})"}
+      ="{{namespace.name}}"
     %span{"ng-repeat-start": "type in wizard.types[namespace.name]"}
       ="{{type.name}}"
-    %span{"ng-repeat-end": true}
+    %span{"ng-repeat-end": " "}
       ="{{$last ? '': ', '}}"

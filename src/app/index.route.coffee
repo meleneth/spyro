@@ -11,5 +11,10 @@ angular.module "spyro"
         templateUrl: "app/wizard/namespaces.html"
         controller: "WizardController"
         controllerAs: "wizard"
+      .state "namespaces.detail",
+        url: "/:namespace"
+        templateUrl: "app/wizard/namespace.html"
+        controller: "WizardController"
+        controllerAs: "wizard"
 
     $urlRouterProvider.otherwise '/'
