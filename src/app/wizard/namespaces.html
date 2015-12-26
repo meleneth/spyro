@@ -17,7 +17,7 @@
     <a ui-sref='namespace({namespace: namespace.name})'>
       {{namespace.name}}
     </a>
-    <span ng-repeat-start='type in wizard.types[namespace.name]'>
+    <span ng-repeat-start='type in namespace.types'>
       {{type.name}}
     </span>
     <span ng-repeat-end>
