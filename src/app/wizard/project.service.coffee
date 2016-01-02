@@ -31,7 +31,7 @@ angular.module "spyro"
 
     project.to_json = ->
       pickle = {name: project.name, language: project.language, namespaces: project.namespaces, types: project.types, classes: project.classes}
-      return JSON.stringify pickle
+      return JSON.stringify pickle, null, 2
 
     project.register_type 'std', '*', 8
     project.register_type 'std', 'char', 1
