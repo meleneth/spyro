@@ -23,6 +23,9 @@ angular.module "spyro"
       project.classes[namespace.name].push new_class
       return new_class
 
+    project.find_namespace = (name) ->
+      return _.find project.namespaces, (n) -> n.name == name
+
     project.find_type = (namespace_name, name) ->
       return _.find project.types, (t) -> t.namespace == namespace_name and t.name == name
 
