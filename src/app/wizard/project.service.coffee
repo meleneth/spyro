@@ -1,3 +1,18 @@
+## NNWO
+# Project
+# {name: '', language: '', namespaces: []}
+# Namespace
+# {name: '' types: [], classes: []}
+# Class
+# {namespace: '', name: '', methods: [], members: []}
+# Type
+# {namespace: '', name: ''}
+# Method:
+# {namespace: '', class: '', name: '', return_type: '', params: []}
+# Param:
+# {type: '', name: ''}
+
+
 angular.module "spyro"
   .service "ProjectService", ->
     project = {name: '', language: 'c++', namespaces: [], types: {}, classes: {}}
