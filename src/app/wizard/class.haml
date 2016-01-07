@@ -2,6 +2,8 @@
   Class
   &gt;
   ="{{ wizard.namespace.name }}"
+  ="::"
+  ="{{ wizard.class.name }}"
   &lt;
 %h4 Types
 %ul
@@ -11,15 +13,15 @@
     ]
     = "{{ type.name }}"
 %h4
-  Classes
+  Methods
   (
-  %span{"ng-click": "wizard.make_new_class()"}
+  %span{"ng-click": "wizard.make_new_method()"}
     ="+"
   )
-%div{"ng-if": "wizard.new_class"}
+%div{"ng-if": "wizard.new_method"}
   %input{"ng-model": "wizard.new_class.name"}
   %span{"ng-click": "wizard.save_new_class()"}
     save
 %ul
-  %li{"ng-repeat": "class in wizard.classes"}
+  %li{"ng-repeat": "class in wizard.methods"}
     = "{{ class.name }}"

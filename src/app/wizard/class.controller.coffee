@@ -5,15 +5,13 @@ angular.module "spyro"
     vm.namespace = Project.register_namespace $stateParams.namespace
     vm.class = Project.find_class vm.namespace.name, $stateParams.class
 
-    vm.types = Project.types[$stateParams.namespace]
-    vm.classes = Project.classes[$stateParams.namespace]
+    vm.types = vm.class.members
+    vm.methods = vm.class.methods
 
-    vm.make_new_class = ->
-      vm.new_class = {name: ''}
+    vm.make_new_method = ->
+      vm.new_method = {name: ''}
 
-    vm.save_new_class = ->
-      Project.register_class vm.namespace.name, vm.new_class.name
-      vm.classes = Project.classes[vm.namespace.name]
-      vm.new_class = false
+    vm.save_new_method = ->
+      alert("ya caught me")
 
     return
