@@ -1,8 +1,8 @@
 angular.module "spyro"
-  .controller "NamespaceController", (ProjectService, $stateParams) ->
+  .controller "NamespaceController", (Project, $stateParams) ->
     vm = this
 
-    vm.namespace = ProjectService.register_namespace $stateParams.namespace
+    vm.namespace = Project.register_namespace $stateParams.namespace
 
     vm.types = vm.namespace.types
     vm.classes = vm.namespace.classes
@@ -11,7 +11,7 @@ angular.module "spyro"
       vm.new_class = {name: ''}
 
     vm.save_new_class = ->
-      ProjectService.register_class vm.namespace.name, vm.new_class.name
+      Project.register_class vm.namespace.name, vm.new_class.name
       vm.classes = vm.namespace.classes
       vm.new_class = false
 

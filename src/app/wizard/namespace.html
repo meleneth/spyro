@@ -1,0 +1,36 @@
+<h1>
+  Namespace
+  &gt;
+  {{ wizard.namespace.name }}
+  &lt;
+</h1>
+<h4>Types</h4>
+<ul>
+  <li ng-repeat='type in wizard.types'>
+    [
+    {{ type.size }}
+    ]
+    {{ type.name }}
+  </li>
+</ul>
+<h4>
+  Classes
+  (
+  <span ng-click='wizard.make_new_class()'>
+    +
+  </span>
+  )
+</h4>
+<div ng-if='wizard.new_class'>
+  <input ng-model='wizard.new_class.name'>
+  <span ng-click='wizard.save_new_class()'>
+    save
+  </span>
+</div>
+<ul>
+  <li ng-repeat='class in wizard.classes'>
+    <a ui-sref='class({namespace: wizard.namespace.name, class: class.name})'>
+      {{ class.name }}
+    </a>
+  </li>
+</ul>
