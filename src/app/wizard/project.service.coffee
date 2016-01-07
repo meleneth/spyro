@@ -14,8 +14,8 @@
 
 
 angular.module "spyro"
-  .service "ProjectService", ->
-    project = {name: '', language: 'c++', namespaces: [], types: {}, classes: {}}
+  .service "Project", ->
+    project = {name: '', language: 'c++', namespaces: []}
 
     project.register_namespace = (name) ->
       namespace = _.find project.namespaces, (n) -> n.name == name
@@ -45,15 +45,15 @@ angular.module "spyro"
 
     project.find_type = (namespace_name, name) ->
       namespace = project.register_namespace namespace_name
-      return _.find namespace.types, (t) -> t.namespace == namespace_name and t.name == name
+      return _.find namespace.types, (t) -> t.name == name
 
     project.find_class = (namespace_name, name) ->
       namespace = project.register_namespace namespace_name
-      return _.find namespace.classes, (t) -> t.namespace == namespace_name and t.name == name
+      return _.find namespace.classes, (c) -> c.name == name
 
     project.to_json = ->
       pickle = {name: project.name, language: project.language, namespaces: project.namespaces, types: project.types, classes: project.classes}
-      return JSON.stringify pickle, null, 2
+      return angular.toJson pickle
 
     project.register_type 'std', '*', 8
     project.register_type 'std', 'char', 1

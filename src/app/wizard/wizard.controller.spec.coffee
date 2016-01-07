@@ -5,5 +5,3 @@ describe 'controllers', ->
     vm = $controller('WizardController')
 
     expect(vm.wizard_name).toEqual("Gandalf")
-
-

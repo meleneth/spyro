@@ -1,19 +1,21 @@
 describe 'project service', ->
   beforeEach module 'spyro'
 
-  it "creates default data", (ProjectService) ->
-    project = ProjectService()
-
-    expect(project.name).toEqual("")
-    expect(project.language).toEqual("c++")
+  it "creates default data", inject (Project) ->
+    expect(Project.name).toEqual("")
+    expect(Project.language).toEqual("c++")
 
   describe "register_namespace", ->
-    it "creates entries for types and classes", (ProjectService) ->
-      project = ProjectService()
+    it "creates and returns a new namespace", inject (Project) ->
+      expect(Project.find_namespace("Wyld")).toBeFalsy()
+      Project.register_namespace("Wyld")
+      expect(Project.find_namespace("Wyld")).toBeTruthy()
 
-      project.register_namespace("Wyld")
-      expect(project.types["Wyld"]).toEqual([])
-      expect(project.classes["Wyld"]).toEqual([])
+  describe "register_class", ->
+    it "creates and returns a class", inject (Project) ->
+      expect(Project.find_namespace("Wyld")).toBeFalsy()
+      Project.register_class("Wyld", "Chyld")
+      expect(Project.find_class("Wyld", "Chyld")).toBeTruthy()
 
 
 
