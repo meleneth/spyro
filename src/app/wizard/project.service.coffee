@@ -1,3 +1,18 @@
+## NNWO
+# Project
+# {name: '', language: '', namespaces: []}
+# Namespace
+# {name: '' types: [], classes: []}
+# Class
+# {namespace: '', name: '', methods: [], members: []}
+# Type
+# {namespace: '', name: ''}
+# Method:
+# {namespace: '', class: '', name: '', return_type: '', params: []}
+# Param:
+# {type: '', name: ''}
+
+
 angular.module "spyro"
   .service "ProjectService", ->
     project = {name: '', language: 'c++', namespaces: [], types: {}, classes: {}}
@@ -25,6 +40,9 @@ angular.module "spyro"
       namespace.classes.push new_class
       return new_class
 
+    project.find_namespace = (name) ->
+      return _.find project.namespaces, (n) -> n.name == name
+
     project.find_type = (namespace_name, name) ->
       namespace = project.register_namespace namespace_name
       return _.find namespace.types, (t) -> t.namespace == namespace_name and t.name == name
@@ -34,8 +52,8 @@ angular.module "spyro"
       return _.find namespace.classes, (t) -> t.namespace == namespace_name and t.name == name
 
     project.to_json = ->
-      pickle = {name: project.name, language: project.language, namespaces: project.namespaces}
-      return JSON.stringify pickle
+      pickle = {name: project.name, language: project.language, namespaces: project.namespaces, types: project.types, classes: project.classes}
+      return JSON.stringify pickle, null, 2
 
     project.register_type 'std', '*', 8
     project.register_type 'std', 'char', 1

@@ -1,0 +1,25 @@
+%h1
+  Class
+  &gt;
+  ="{{ wizard.namespace.name }}"
+  &lt;
+%h4 Types
+%ul
+  %li{"ng-repeat": "type in wizard.types"}
+    [
+    = "{{ type.size }}"
+    ]
+    = "{{ type.name }}"
+%h4
+  Classes
+  (
+  %span{"ng-click": "wizard.make_new_class()"}
+    ="+"
+  )
+%div{"ng-if": "wizard.new_class"}
+  %input{"ng-model": "wizard.new_class.name"}
+  %span{"ng-click": "wizard.save_new_class()"}
+    save
+%ul
+  %li{"ng-repeat": "class in wizard.classes"}
+    = "{{ class.name }}"
