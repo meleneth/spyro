@@ -55,6 +55,17 @@ angular.module "spyro"
       pickle = {name: project.name, language: project.language, namespaces: project.namespaces, types: project.types, classes: project.classes}
       return angular.toJson pickle
 
+    project.resolve = (needle) ->
+      info = _.split needle, "::"
+      namespace = project.find_namespace info[0]
+      return false unless namespace
+      t = project.find_type namespace.name, info[1]
+      return t if t
+      c = project.find_class namespace.name, info[1]
+      return c if c
+      return false
+
+
     project.register_type 'std', '*', 8
     project.register_type 'std', 'char', 1
     project.register_type 'std', 'uint32_t', 4

@@ -17,6 +17,15 @@ describe 'project service', ->
       Project.register_class("Wyld", "Chyld")
       expect(Project.find_class("Wyld", "Chyld")).toBeTruthy()
 
+  describe "resolve", ->
+    it "returns false if nothing found", inject (Project) ->
+      expect(Project.resolve("Wyld::Bogus")).toBeFalsy()
 
+    it "finds a class in a namespace", inject (Project) ->
+      Project.register_class("Wyld", "Chyld")
+      expect(Project.resolve("Wyld::Chyld")).toBeTruthy()
 
+    it "finds a type in a namespace", inject (Project) ->
+      Project.register_type("Wyld", "Chyld")
+      expect(Project.resolve("Wyld::Chyld")).toBeTruthy()
 
